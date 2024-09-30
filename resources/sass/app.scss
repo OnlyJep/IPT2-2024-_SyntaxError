@@ -2,7 +2,11 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
 // Variables
-@import 'variables';
+@import 'variables'; // Ensure this file exists
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap/scss/bootstrap'; // Make sure Bootstrap is installed in your project
+
+// Your Profile CSS file
+@import '../css/profile.css'; // Adjust path if SCSS is not in public/scss
+
