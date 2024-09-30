@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5; /* Light background color */
+}
+
+.login-container {
+    display: flex;
+    height: 100vh; /* Full height of the viewport */
+}
+
+.left {
+    flex: 1;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; /* Remove padding to allow full background display */
+}
+
+.left-image {
+    max-width: 80%; /* Limit the size of the image */
+    max-height: 80%; /* Limit the height of the image */
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* For positioning the background */
+    background-image: url('https://img.freepik.com/premium-photo/abstract-white-blue-geometric-background-with-overlapping-shapes-subtle-pattern_1093939-41982.jpg');
+    background-size: cover; /* Cover the entire div */
+    background-position: center; /* Center the background image */
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.8); /* White background with slight transparency */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 400px; /* Fixed width for the form */
+    text-align: center; /* Center text inside form */
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form input {
+    margin-bottom: 20px; /* Space between inputs */
+    padding: 10px;
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+}
+
+.login-form button {
+    padding: 10px;
+    background-color: #05335edb; /* Match left div color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer; /* Pointer cursor for buttons */
+}
+
+.login-form button:hover {
+    background-color: #365eaa; /* Darker shade on hover */
+}
+
+.forgot-password {
+    margin-top: 10px;
+    color: #4267B2; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.forgot-password:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.create-account {
+    margin-top: 20px;
+    background-color: transparent; /* Transparent background */
+    color: #05335edb; /* Link color */
+    border: none;
+    cursor: pointer; /* Pointer cursor for button */
+}
+
+.create-account:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.form-separator {
+    border: 0;
+    height: 1px;
+    background-color: #ccc; /* Light gray color for the separator */
+    margin: 10px 0; /* Space above and below the line */
+}
