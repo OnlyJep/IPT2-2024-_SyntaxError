@@ -29,10 +29,13 @@ body {
     justify-content: center;
     align-items: center;
     position: relative; /* For positioning the background */
+    background-image: url('https://img.freepik.com/premium-photo/abstract-white-blue-geometric-background-with-overlapping-shapes-subtle-pattern_1093939-41982.jpg');
+    background-size: cover; /* Cover the entire div */
+    background-position: center; /* Center the background image */
 }
 
 .form-container {
-    background-color: white; /* White background for the form */
+    background-color: rgba(255, 255, 255, 0.8); /* White background with slight transparency */
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
@@ -51,6 +54,16 @@ body {
     border: 1px solid #ccc; /* Light border */
     border-radius: 5px; /* Rounded corners */
     font-size: 16px; /* Font size */
+}
+
+.login-form select {
+    margin-bottom: 20px; /* Space below the select */
+    padding: 10px; /* Padding for better usability */
+    border: 1px solid #ccc; /* Match other input styles */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    color: #05335edb; /* Text color */
+    background-color: #fff; /* Background color */
 }
 
 .login-form button {
@@ -78,9 +91,8 @@ body {
 }
 
 .create-account {
-    margin-top: 20px;
-    background-color: transparent; /* Transparent background */
-    color: #05335edb; /* Link color */
+    padding: 10px;
+    background-color: #4267B2; /* Link color */
     border: none;
     cursor: pointer; /* Pointer cursor for button */
 }
@@ -90,8 +102,76 @@ body {
 }
 
 .form-separator {
-    border: 0;
-    height: 1px;
-    background-color: #ccc; /* Light gray color for the separator */
-    margin: 10px 0; /* Space above and below the line */
+    border: none; /* Remove default border */
+    height: 1px; /* Height of the separator */
+    background-color: #ccc; /* Color of the line */
+    margin: 20px 0; /* Space above and below the separator */
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* 10% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 450px; /* Width of the modal */
+    border-radius: 10px; /* Rounded corners for modal */
+    text-align: center; /* Center text in modal */
+}
+
+.close {
+    color: #aaa; /* Gray color */
+    float: right; /* Align to the right */
+    font-size: 28px; /* Font size */
+    font-weight: bold; /* Bold text */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Change color on hover/focus */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Pointer cursor */
+}
+
+.name-container {
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: space-between; /* Space between the elements */
+}
+
+.name-container input {
+    flex: 1; /* Make each input take equal space */
+    margin-right: 10px; /* Add space between the elements */
+    padding: 10px; /* Add padding for better usability */
+}
+
+.name-container input:last-child {
+    margin-right: 0; /* Remove right margin from the last element */
+}
+
+.gender-container {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the gender dropdown */
+    margin-bottom: 20px; /* Space below the gender input */
+}
+
+.gender-container select {
+    flex: 1; /* Make the select take full width */
+    padding: 10px; /* Add padding for better usability */
+    border: 1px solid #ccc; /* Match the style of other inputs */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #fff; /* White background */
+    color: #05335edb; /* Text color */
+    font-size: 16px; /* Font size */
 }

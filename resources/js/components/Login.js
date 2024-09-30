@@ -84,20 +84,73 @@ document.addEventListener('DOMContentLoaded', () => {
     // Append form container to the right div
     rightDiv.appendChild(formContainer);
 
-    // Set the background image for the right section with low opacity
-    rightDiv.style.backgroundImage = 'url("https://media.istockphoto.com/id/1145349711/vector/blue-line-vector-background.jpg?s=612x612&w=0&k=20&c=RRxdcR1O0YSiMXuojwQ4ZZjCEnCsfdOmWO6IAK_XYOQ=")';
-    rightDiv.style.backgroundSize = 'cover'; // Cover the entire div
-    rightDiv.style.backgroundPosition = 'center'; // Center the background image
-    rightDiv.style.opacity = '0.8'; // Low opacity for the background image
-    rightDiv.style.display = 'flex';
-    rightDiv.style.justifyContent = 'center';
-    rightDiv.style.alignItems = 'center';
-    rightDiv.style.height = '100vh'; // Full height of the viewport
-
     // Append left and right divs to the login container
     loginContainer.appendChild(leftDiv);
     loginContainer.appendChild(rightDiv);
 
     // Append the entire login container to the root div
     root.appendChild(loginContainer);
+
+    // Create the modal structure (hidden initially)
+    const modal = document.createElement('div');
+    modal.classList.add('modal');
+    modal.style.display = 'none'; // Hidden by default
+
+    const modalContent = document.createElement('div');
+    modalContent.classList.add('modal-content');
+
+    const closeModalBtn = document.createElement('span');
+    closeModalBtn.classList.add('close');
+    closeModalBtn.innerHTML = '&times;'; // Close button (×)
+
+    const modalFormTitle = document.createElement('h2');
+    modalFormTitle.textContent = 'Register New Account';
+
+    // Create the registration form
+    const registerForm = document.createElement('form');
+    registerForm.classList.add('login-form');
+    registerForm.innerHTML = `
+        <div class="name-container">
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+        </div>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <input type="password" placeholder="Confirm Password" required>
+        <div class="gender-container">
+            <select required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <button type="submit">Register</button>
+    `;
+
+    // Append form elements to modal content
+    modalContent.appendChild(closeModalBtn);
+    modalContent.appendChild(modalFormTitle);
+    modalContent.appendChild(registerForm);
+    modal.appendChild(modalContent);
+
+    // Append the modal to the root div
+    root.appendChild(modal);
+
+    // Show modal when "Create New Account" is clicked
+    createAccountBtn.addEventListener('click', () => {
+        modal.style.display = 'block';
+    });
+
+    // Close modal when "×" is clicked
+    closeModalBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    // Close modal when clicking outside of the modal content
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
 });
