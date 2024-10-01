@@ -1,0 +1,140 @@
+/* General body styling with background color */
+body {
+    background-color: #240046; /* Deep purple background */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column; /* Allow vertical stacking of content */
+}
+
+/* Centered dashboard styling */
+.dashboard-container {
+    background-color: rgba(36, 0, 70, 0.9); /* Slightly lighter deep purple */
+    width: 100%; /* Full width for the dashboard */
+    color: white; /* White text */
+    text-align: center; /* Center text */
+    border-radius: 0; /* No rounding for corners */
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Darker shadow for more depth */
+    margin-top: 50px; /* Space below the navbar */
+    flex: 1; /* Allow the dashboard to grow and take available space */
+}
+
+/* New rule for section headings */
+.section h3 {
+    text-align: left; /* Keep text aligned to the left */
+    padding-left: 20px; /* Add left padding */
+}
+
+/* Navbar styling, adjusted size and centered */
+.navbar {
+    position: fixed;
+    top: -20px; /* Adjusted so more of the navbar is visible, ensuring icons are fully visible */
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content; /* Prevents filling the entire width */
+    border-radius: 20px; /* Rounded corners */
+    padding: 5px 20px; /* Reduced top and bottom padding */
+    background: rgba(255, 255, 255, 0.1); /* Glass effect background */
+    backdrop-filter: blur(10px); /* Smooth blur effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Realistic shadow */
+    transition: top 0.8s ease; /* Smoother show/hide animation */
+}
+
+.navbar a {
+    color: #fff; /* Lighter color for better contrast */
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #007bff; /* Hover effect */
+}
+
+.navbar:hover {
+    top: 0; /* Bring the navbar fully visible on hover */
+    transition: top 0.3s ease;
+}
+
+/* Flexbox for icon layout */
+.navbar ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+    display: flex; /* Flexbox for horizontal layout */
+    gap: 15px; /* Space between icons */
+    justify-content: center; /* Center the icons inside the navbar */
+}
+
+.navbar .nav-item {
+    width: 50px; /* Fixed width for icons */
+    height: 50px; /* Fixed height for icons */
+    display: flex;
+    justify-content: center; /* Center the icon horizontally */
+    align-items: center; /* Center the icon vertically */
+    margin-bottom: 5px;
+}
+
+/* Prevent stretching and maintain aspect ratio for icons */
+.navbar .nav-item img {
+    max-width: 100%; /* Ensure the icon image scales within the width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure the image fits correctly */
+}
+
+.navbar a, .btn-logout {
+    display: flex; /* Use flex to center icons */
+    justify-content: center; /* Center icons horizontally */
+    align-items: center; /* Center icons vertically */
+    text-decoration: none; /* Remove underline */
+    color: white; /* White text */
+    border-radius: 50%; /* Round icons */
+    padding: 5px; /* Smaller padding for icons */
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Transition for hover effects */
+    background-color: rgba(60, 9, 108, 0.6); /* Slightly transparent dark background */
+    border: 2px solid white; /* Add white outline to icons */
+}
+
+/* Scaling effect and glow on hover */
+.navbar a:hover, .btn-logout:hover {
+    background-color: #7B2CBF; /* Softer purple hover effect */
+    color: #FFFFFF; /* Keep text white */
+    box-shadow: 0 0 15px rgba(123, 44, 191, 0.7); /* Purple glow effect */
+    transform: scale(1.1); /* Scale up the icons on hover */
+}
+
+/* Frosted glass effect for the tables */
+.dashboard-table {
+    width: calc(100% - 40px); /* Width with space on left and right */
+    margin: 20px auto; /* Space above and below the table, centered */
+    border-collapse: collapse; /* Merge borders */
+    text-align: center; /* Center table text */
+    background: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+    border-radius: 0 0 15px 15px; /* Rounded bottom corners for glass effect */
+    backdrop-filter: blur(10px); /* Blur effect to create a frosted look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+.dashboard-table th, .dashboard-table td {
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Light border */
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background for rows */
+}
+
+.dashboard-table th {
+    background-color: #5A189A; /* Darker purple for header */
+    color: white; /* White text */
+}
+
+.dashboard-table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1); /* Very light shade for alternate rows */
+}
+
+/* Hover effect for table rows */
+.dashboard-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.4); /* Muted highlight for hover effect */
+}

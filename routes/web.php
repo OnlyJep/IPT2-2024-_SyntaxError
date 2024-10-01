@@ -2,12 +2,18 @@
 
 use Illuminate\Support\Facades\Route;
 
-// Define the root route for the login page
+// Root route for the login page
 Route::get('/', function () {
     return view('welcome'); // This loads resources/views/welcome.blade.php
 });
 
-// Optionally, you can create routes for handling the login logic
-// For example, if you are handling authentication:
+// Route for the home page"
+Route::get('/home', function () {
+    return view('Home'); // This loads resources/views/Home.blade.php
+});
 
-// Route::post('/login', [LoginController::class, 'login']);
+// Route for Profiling page
+Route::get('/profiling', function () {
+    return view('Profiling'); // Loads resources/views/Profiling.blade.php
+});
+    
