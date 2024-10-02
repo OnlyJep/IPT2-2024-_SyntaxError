@@ -1,0 +1,130 @@
+/* Main styling for body */
+body {
+    display: flex;
+    justify-content: center; /* horizontally center the container */
+    align-items: flex-start; /* start the container from the top but can be moved down */
+    height: 100vh; /* full viewport height */
+    margin: 0; /* remove default body margin */
+    background-image: url('../scss/../img/morrr.jpg'); /* Background image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating */
+    padding: 20px; /* Optional padding around the container */
+    overflow: auto; /* Add scrollability if needed */
+}
+
+/* Container for the form */
+.profiling-container {
+    width: 100%; /* full width of the viewport */
+    max-width: 1200px; /* max width for the form */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* semi-transparent white background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* optional shadow for depth */
+    color: #3c096c; /* main color for text */
+    margin-top: 50px; /* move the form container down */
+    overflow-y: auto; /* ensure the form is scrollable if too long */
+    max-height: 90vh; /* limit the height of the container to prevent overflow */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth fade and slide effects */
+}
+
+/* Styling for form headings */
+h2 {
+    text-align: center;
+    color: #5a189a;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #5a189a; /* heading color for the new section */
+    margin-top: 30px; /* margin above the new section */
+    margin-bottom: 15px; /* additional margin below the section heading */
+    grid-column: span 4; /* span across all columns in grid layout */
+}
+
+/* Grid layout for form */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* four columns in landscape view */
+    grid-gap: 20px; /* space between columns */
+}
+
+/* Form group styling */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label styling */
+label {
+    font-weight: bold;
+    color: #7b2cbf;
+    margin-bottom: 5px;
+}
+
+/* Input box styling */
+input {
+    padding: 8px; /* reduced padding for smaller input boxes */
+    border: 1px solid #9d4edd;
+    border-radius: 5px;
+    background-color: #f4f0ff;
+    color: #3c096c;
+    font-size: 14px; /* smaller font size for input boxes */
+}
+
+/* Input focus effect */
+input:focus {
+    border-color: #5a189a;
+    outline: none;
+}
+
+/* Form footer and button styling */
+.form-footer {
+    margin-top: 20px;
+    display: flex; /* use flexbox for better alignment */
+    justify-content: flex-start; /* align buttons to the left */
+    gap: 10px; /* spacing between buttons */
+}
+
+/* Submit and Next button styles */
+.submit-button, .next-button {
+    padding: 8px 12px; /* adjust padding for medium size */
+    background-color: #5a189a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px; /* make the font size smaller to match button size */
+    width: 120px; /* Set width for consistency */
+    transition: background-color 0.3s ease; /* Smooth background color change */
+}
+
+/* Button hover effects */
+.submit-button:hover, .next-button:hover {
+    background-color: #7b2cbf;
+}
+
+
+
+/* Additional spacing for Mother and Father sections */
+.mother-section, .father-section {
+    margin-top: 20px; /* Add margin to separate sections */
+}
+
+/* Animation for form container */
+.profiling-container {
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Added transition for animation */
+}
+
+/* When the form is hidden */
+.profiling-container.hidden {
+    opacity: 0; /* Fade out */
+    transform: translateY(-10px); /* Slide up */
+}
+
+/* When the form is shown */
+.profiling-container.show {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Slide down */
+}
