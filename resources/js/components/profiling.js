@@ -1,179 +1,58 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import '../../sass/app.scss'; // Assuming you have your CSS here
+import { FaUser, FaCalendarAlt, FaListAlt, FaInfoCircle, FaSignOutAlt, FaCalendar } from 'react-icons/fa';
+import '../../sass/app.scss';
 
-function ProfilingForm() {
-    const [step, setStep] = useState(1); // Step starts at 1 (initial form)
-    const navigate = useNavigate();
+function Navbar() {
+    const [showEvents, setShowEvents] = useState(false);
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log("Form submitted");
-        navigate('/success');
+    // Sample events data with Facebook image URL
+    const events = [
+        { id: 1, name: 'MIDTERM EXAM', date: '2024-10-10', image: 'https://scontent.fbxu1-1.fna.fbcdn.net/v/t39.30808-6/461581026_909479287870172_356603662978175704_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeF8FxdZsP-hH0KLxaC0Ee_lTRyahSaaFmdNHJqFJpoWZ-nSzUHIb3eKVKy5V3VqFOtQaf4W6g6m7hauu0IIPdAu&_nc_ohc=ZSpNV1Yk_YcQ7kNvgEYF4I5&_nc_ht=scontent.fbxu1-1.fna&_nc_gid=AwvJqGVF6xnXgjVspioXEGd&oh=00_AYA-ZdLUulR1HXVzFpjKlcKNwQD0PHiXOQVwSCJIMKLsIQ&oe=67033685' },
+        // Add more events with their respective URLs as needed
+    ];
+
+    const closeEventBoard = () => {
+        const eventBoard = document.querySelector('.event-board');
+        eventBoard.classList.add('hidden'); // Start fade-out animation
+        
+        // Wait for the transition to complete, then hide the event board
+        setTimeout(() => {
+            setShowEvents(false); // Update the state to hide the event board
+        }, 500); // Match this time with the CSS transition duration
     };
 
     return (
-        <div className="profiling-container">
-            <h2>STUDENT PROFILE</h2>
-            <form onSubmit={handleSubmit}>
-                {/* First Form - Student Info, Elementary, Junior High, Senior High, College, and Master's Degree */}
-                <div className="form-grid">
-                    {/* Student Info */}
-                    <div className="form-group">
-                        <label htmlFor="family-name">* Family Name</label>
-                        <input type="text" id="family-name" required />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="given-name">Given Name</label>
-                        <input type="text" id="given-name" />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="middle-name">Middle Name</label>
-                        <input type="text" id="middle-name" />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="dob">* Date of Birth</label>
-                        <input type="date" id="dob" required />
-                    </div>
+        <>
+            <nav className="navbar">
+                <ul className="navbar-icons">
+                    <li><a href="/profile"><FaUser title="Profile" /></a></li>
+                    <li><a href="/schedule"><FaCalendarAlt title="Schedule" /></a></li>
+                    <li><a href="/grades"><FaListAlt title="Grades" /></a></li>
+                    <li><a href="/about-us"><FaInfoCircle title="About Us" /></a></li>
+                    <li><a href="/logout"><FaSignOutAlt title="Logout" /></a></li>
+                    <li><a onClick={() => setShowEvents(true)}><FaCalendar title="Events" style={{ color: 'white' }} /></a></li>
+                </ul>
+            </nav>
 
-                    {/* Address Info */}
-                    <div className="form-group">
-                        <label htmlFor="place-of-birth">* Place of Birth</label>
-                        <input type="text" id="place-of-birth" required />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="address">House#/Street Name & Barangay</label>
-                        <input type="text" id="address" />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="region">Region</label>
-                        <input type="text" id="region" />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="province">Province</label>
-                        <input type="text" id="province" />
-                    </div>
-
-                    {/* Contact Info */}
-                    <div className="form-group">
-                        <label htmlFor="municipality">Municipality</label>
-                        <input type="text" id="municipality" />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="religion">Religion</label>
-                        <input type="text" id="religion" />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="citizenship">Citizenship</label>
-                        <input type="text" id="citizenship" />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="contact-number">Contact Number(s)</label>
-                        <input type="tel" id="contact-number" />
-                    </div>
-
-                    {/* Language & Email */}
-                    <div className="form-group">
-                        <label htmlFor="language-spoken">Language Spoken</label>
-                        <input type="text" id="language-spoken" />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="email">E-mail</label>
-                        <input type="email" id="email" />
+            {/* Event Board Modal */}
+            {showEvents && (
+                <div className="event-board">
+                    <div className="event-board-content">
+                        <button onClick={closeEventBoard} className="close-btn">X</button> {/* Small close button */}
+                        <h2>Upcoming Events</h2>
+                        <ul>
+                            {events.map(event => (
+                                <li key={event.id}>
+                                    <img src={event.image} alt={event.name} style={{ width: '100%', height: 'auto', borderRadius: '8px' }} />
+                                    {event.name} - {event.date}
+                                </li>
+                            ))}
+                        </ul>
                     </div>
                 </div>
-
-                {/* School Last Attended in Elementary */}
-                <h3>SCHOOL LAST ATTENDED IN ELEMENTARY</h3>
-                <div className="form-grid">
-                    <div className="form-group">
-                        <label htmlFor="school-name">Name of School</label>
-                        <input type="text" id="school-name" />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="school-address">Address</label>
-                        <input type="text" id="school-address" />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="year-graduated">Year Graduated</label>
-                        <input type="text" id="year-graduated" />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="type-of-school">Type of School</label>
-                        <input type="text" id="type-of-school" />
-                    </div>
-                </div>
-
-                {/* School Last Attended in Junior High School */}
-                <h3>SCHOOL LAST ATTENDED IN JUNIOR HIGH SCHOOL</h3>
-                <div className="form-grid">
-                    <div className="form-group">
-                        <label htmlFor="junior-school-name">Name of School</label>
-                        <input type="text" id="junior-school-name" />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="junior-school-address">Address</label>
-                        <input type="text" id="junior-school-address" />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="junior-year-graduated">Year Graduated</label>
-                        <input type="text" id="junior-year-graduated" />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="junior-type-of-school">Type of School</label>
-                        <input type="text" id="junior-type-of-school" />
-                    </div>
-                </div>
-
-                {/* School Last Attended in Senior High School */}
-                <h3>SCHOOL LAST ATTENDED IN SENIOR HIGH SCHOOL</h3>
-                <div className="form-grid">
-                    <div className="form-group">
-                        <label htmlFor="senior-school-name">Name of School</label>
-                        <input type="text" id="senior-school-name" />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="senior-school-address">Address</label>
-                        <input type="text" id="senior-school-address" />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="senior-year-graduated">Year Graduated</label>
-                        <input type="text" id="senior-year-graduated" />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="senior-type-of-school">Type of School</label>
-                        <input type="text" id="senior-type-of-school" />
-                    </div>
-                </div>
-
-                {/* New Section - School Last Attended in College and Master's Degree */}
-                <h3>SCHOOL LAST ATTENDED IN COLLEGE AND MASTER'S DEGREE SCHOOL</h3>
-                <div className="form-grid">
-                    <div className="form-group">
-                        <label htmlFor="college-school-name">Name of School</label>
-                        <input type="text" id="college-school-name" />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="college-school-address">Address</label>
-                        <input type="text" id="college-school-address" />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="college-year-graduated">Year Graduated</label>
-                        <input type="text" id="college-year-graduated" />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="college-type-of-school">Type of School</label>
-                        <input type="text" id="college-type-of-school" />
-                    </div>
-                </div>
-
-                {/* Buttons */}
-                <div className="form-footer">
-                    <button type="submit" className="submit-button">Submit</button>
-                </div>
-            </form>
-        </div>
+            )}
+        </>
     );
 }
 
-export default ProfilingForm;
+export default Navbar;

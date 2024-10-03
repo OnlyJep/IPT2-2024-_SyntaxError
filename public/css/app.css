@@ -12135,131 +12135,162 @@ button:hover {
   height: 20px;
 }
 
-/* Main styling for body */
+/* Ensure html and body take up full height */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Styling for body */
 body {
   display: flex;
-  justify-content: center; /* horizontally center the container */
-  align-items: flex-start; /* start the container from the top but can be moved down */
-  height: 100vh; /* full viewport height */
-  margin: 0; /* remove default body margin */
-  background-image: url(/images/morrr.jpg?605eeb3e0a032d9fbe8951c55adfa9bf); /* Background image */
-  background-size: cover; /* Cover the entire viewport */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent repeating */
-  padding: 20px; /* Optional padding around the container */
-  overflow: auto; /* Add scrollability if needed */
+  justify-content: center;
+  align-items: center;
+  background-image: url(/images/lucks.jpg?ed91ce93bcd5719eb6b2e255956084d6); /* Path to your image */
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-attachment: fixed; /* Keeps the image fixed when scrolling */
+  min-height: 100vh; /* Ensures the body takes full viewport height */
 }
 
-/* Container for the form */
-.profiling-container {
-  width: 100%; /* full width of the viewport */
-  max-width: 1200px; /* max width for the form */
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.9); /* semi-transparent white background */
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* optional shadow for depth */
-  color: #3c096c; /* main color for text */
-  margin-top: 50px; /* move the form container down */
-  overflow-y: auto; /* ensure the form is scrollable if too long */
-  max-height: 90vh; /* limit the height of the container to prevent overflow */
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth fade and slide effects */
-}
-
-/* Styling for form headings */
-h2, .h2 {
-  text-align: center;
-  color: #5a189a;
-  font-size: 24px;
-  margin-bottom: 20px;
-}
-
-h3, .h3 {
-  color: #5a189a; /* heading color for the new section */
-  margin-top: 30px; /* margin above the new section */
-  margin-bottom: 15px; /* additional margin below the section heading */
-  grid-column: span 4; /* span across all columns in grid layout */
-}
-
-/* Grid layout for form */
-.form-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* four columns in landscape view */
-  grid-gap: 20px; /* space between columns */
-}
-
-/* Form group styling */
-.form-group {
+/* Navbar container */
+.navbar {
+  width: 100%;
+  background-color: #3c096c;
+  padding: 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
 }
 
-/* Label styling */
-label {
-  font-weight: bold;
-  color: #7b2cbf;
-  margin-bottom: 5px;
+/* Navbar icon list */
+.navbar-icons {
+  list-style: none;
+  display: flex;
+  gap: 40px; /* Increased gap for better spacing */
 }
 
-/* Input box styling */
-input {
-  padding: 8px; /* reduced padding for smaller input boxes */
-  border: 1px solid #9d4edd;
-  border-radius: 5px;
-  background-color: #f4f0ff;
-  color: #3c096c;
-  font-size: 14px; /* smaller font size for input boxes */
+/* Navbar icon items */
+.navbar-icons li {
+  display: inline;
 }
 
-/* Input focus effect */
-input:focus {
-  border-color: #5a189a;
-  outline: none;
+/* Navbar icon links */
+.navbar-icons a {
+  color: white; /* Make all icons white */
+  font-size: 24px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for scaling and color */
 }
 
-/* Form footer and button styling */
-.form-footer {
-  margin-top: 20px;
-  display: flex; /* use flexbox for better alignment */
-  justify-content: flex-start; /* align buttons to the left */
-  gap: 10px; /* spacing between buttons */
+/* Navbar icon hover effect */
+.navbar-icons a:hover {
+  color: #FFCC4D; /* Change color to the new color on hover */
+  transform: scale(1.2); /* Scale up the icon on hover */
 }
 
-/* Submit and Next button styles */
-.submit-button, .next-button {
-  padding: 8px 12px; /* adjust padding for medium size */
-  background-color: #5a189a;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px; /* make the font size smaller to match button size */
-  width: 120px; /* Set width for consistency */
-  transition: background-color 0.3s ease; /* Smooth background color change */
+/* Event Board Styles */
+.event-board {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it is above other elements */
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px); /* Background blur effect */
+  opacity: 1; /* Start fully opaque */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for opacity and transform */
+  transform: scale(1); /* Start at normal scale */
 }
 
-/* Button hover effects */
-.submit-button:hover, .next-button:hover {
-  background-color: #7b2cbf;
-}
-
-/* Additional spacing for Mother and Father sections */
-.mother-section, .father-section {
-  margin-top: 20px; /* Add margin to separate sections */
-}
-
-/* Animation for form container */
-.profiling-container {
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Added transition for animation */
-}
-
-/* When the form is hidden */
-.profiling-container.hidden {
+/* Class to hide the event board */
+.event-board.hidden {
   opacity: 0; /* Fade out */
-  transform: translateY(-10px); /* Slide up */
+  transform: scale(0.95); /* Slightly shrink */
+  pointer-events: none; /* Prevent interaction */
 }
 
-/* When the form is shown */
-.profiling-container.show {
-  opacity: 1; /* Fade in */
-  transform: translateY(0); /* Slide down */
+/* Event Board Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start fully transparent */
+  }
+  to {
+    opacity: 1; /* End fully opaque */
+  }
+}
+.event-board-content {
+  background: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+  border-radius: 10px;
+  padding: 20px;
+  width: 400px; /* Width of the event board */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for the board */
+}
+
+.event-board h2, .event-board .h2 {
+  margin: 0 0 10px 0; /* Margin for the title */
+}
+
+.event-board ul {
+  list-style: none; /* No bullet points */
+  padding: 0; /* Remove padding */
+}
+
+.event-board li {
+  margin: 5px 0; /* Space between events */
+}
+
+/* Close Button Styles */
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 16px; /* Smaller font size for the close button */
+  cursor: pointer;
+  position: absolute;
+  top: 10px; /* Distance from the top */
+  left: 50%; /* Center it horizontally */
+  transform: translateX(-50%); /* Offset the button to center it */
+  color: #3c096c; /* Match with your theme */
+  padding: 5px 10px; /* Add padding for a better touch area */
+  border-radius: 50%; /* Make the edges round */
+  transition: color 0.3s ease; /* Transition for hover effect */
+}
+
+.close-btn:hover {
+  color: #FFCC4D; /* Change color on hover */
+}
+
+.event-list {
+  display: flex; /* Use flexbox for horizontal layout */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  gap: 16px; /* Space between items */
+  margin-top: 16px; /* Space above the event list */
+}
+
+.event-item {
+  flex: 1 1 calc(25% - 16px); /* Adjust the size of each event item */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
+  border-radius: 8px; /* Rounded corners for the event items */
+  overflow: hidden; /* Prevent overflow from child elements */
+}
+
+.event-item img {
+  border-radius: 8px 8px 0 0; /* Round the top corners of the image */
+}
+
+.event-details {
+  padding: 8px; /* Padding around the text details */
+  text-align: center; /* Center align text */
 }
