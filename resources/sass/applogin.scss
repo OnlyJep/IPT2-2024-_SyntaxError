@@ -1,0 +1,28 @@
+// resources/sass/app.scss
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables'; // Ensure you have this file or remove if not used
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Login container styles
+@import './scss/login';
+
+
+// resources/sass/app.scss
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap'; // Importing Bootstrap
+
+// Custom SCSS (your login styles)
+@import './scss/login'; // Import custom login styles
+
+// Variables (optional, if used)
+@import 'variables'; // Ensure you have a variables.scss file or remove this line

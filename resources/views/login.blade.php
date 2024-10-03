@@ -13,6 +13,6 @@
     <div id="root">
         <h1>Welcome to Urian Connect!</h1>
     </div>
-    <script src="{{ mix('js/app.js') }}"></script>
+    <script src="{{ mix('js/Loginapp.js') }}"></script>
 </body>
 </html>

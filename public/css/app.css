@@ -11966,173 +11966,54 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-html, body {
-  height: 100%;
-  margin: 0;
-}
-
-.login-page {
-  display: flex;
-  height: 100vh;
-}
-
 .login-container {
-  width: 450px;
-  padding: 30px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 20px;
-  box-shadow: 0 4px 20px #5A189A;
-  text-align: center;
-}
-
-h1, .h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.input-group {
-  margin-bottom: 20px;
-}
-.input-group label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
-  text-align: left;
-}
-
-button {
-  width: 100%;
-  padding: 12px;
-  background-color: #5A189A;
-  color: white;
-  border: none;
-  border-radius: 50px;
-}
-button:hover {
-  background-color: #7B2CBF;
-}
-
-.forgot-password {
-  text-align: center; /* Center the forgot password link */
-  margin-top: 15px; /* Space above the link */
-}
-
-.forgot-password a {
-  color: #620462;
-  text-decoration: none;
-}
-
-.left-nav {
-  position: relative;
-  flex: 1;
-  background-image: url(/images/2.png?5328d3a2722c015be62eaac2f61a9055);
-  background-size: cover;
-  background-position: center;
-}
-
-.center-image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  opacity: 1;
-}
-
-.center-image img {
-  width: 500px;
-  height: auto;
-}
-
-.right-nav {
-  flex: 1;
   display: flex;
-  align-items: center;
   justify-content: center;
-  background-color: #f0f0f0;
-  background-image: url(/images/RightNav.jpg?d39e1fc633171bc7f72b03cce92aef96);
-  background-size: cover;
-  background-position: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #10002b;
 }
-
-.login-container {
-  width: 100%;
-  max-width: 400px;
+.login-container .login-form {
+  background: rgba(255, 255, 255, 0.1);
   padding: 20px;
-  background-color: white;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
-
-.input-group {
-  margin-bottom: 20px; /* Space between input fields */
+.login-container .login-form h1, .login-container .login-form .h1 {
+  font-family: "Nunito", sans-serif;
+  color: #fff;
+  margin-bottom: 20px;
 }
-
-.input-group label {
+.login-container .login-form .form-group {
+  margin-bottom: 15px;
+}
+.login-container .login-form .form-group label {
   display: block;
-  margin-bottom: 8px; /* Space between label and input */
-  font-weight: bold; /* Make label text bold */
+  color: #ddd;
+  margin-bottom: 5px;
 }
-
-.input-field {
-  width: 100%; /* Full width */
-  padding: 12px 20px; /* Maintain padding */
-  box-sizing: border-box;
-  background-color: #f7f7f7;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  outline: none;
-  transition: border-color 0.3s ease-in-out;
-}
-
-.login-button {
+.login-container .login-form .form-group input {
   width: 100%;
-  padding: 12px;
-  background-color: #620462;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+.login-container .login-form .login-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #6200ea;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
-  font-size: 1rem;
   transition: background-color 0.3s ease;
 }
-
-.login-button:hover {
-  background-color: #4b0d4d; /* Darker shade on hover */
-}
-
-.password-wrapper {
-  position: relative;
-}
-
-.password-container {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  position: relative;
-}
-
-.password-input {
-  flex: 1;
-  padding-right: 70px;
-}
-
-.toggle-password {
-  position: absolute;
-  right: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  background: none;
-  border: none;
-  outline: none;
-  padding: 0;
-  color: #620462;
-}
-.toggle-password .password-icon {
-  width: 20px;
-  height: 20px;
+.login-container .login-form .login-btn:hover {
+  background-color: #3700b3;
 }
 
 /* Ensure html and body take up full height */
@@ -12143,154 +12024,101 @@ html, body {
   overflow: hidden; /* Prevent scrolling */
 }
 
-/* Styling for body */
-body {
+/* Basic layout to center the form */
+.login-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url(/images/lucks.jpg?ed91ce93bcd5719eb6b2e255956084d6); /* Path to your image */
-  background-size: cover; /* Ensures the image covers the entire area */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-  background-attachment: fixed; /* Keeps the image fixed when scrolling */
-  min-height: 100vh; /* Ensures the body takes full viewport height */
+  flex-direction: column;
+  justify-content: flex-end; /* Aligns the form to the bottom */
+  align-items: center; /* Center the items horizontally */
+  height: 100vh; /* Full-screen height */
+  background-color: #10002b; /* The background color */
+  background-image: url(/images/uurian.jpg?431524f28ed152dcb8c6f5b8cc42c805); /* Replace this with your actual image path */
+  background-size: cover; /* Ensure the image covers the entire area */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  color: white;
+  font-family: "Nunito", sans-serif;
+  padding-bottom: 15px; /* Add space at the bottom */
+  padding-top: 100px; /* Add some padding to the top if needed */
 }
 
-/* Navbar container */
-.navbar {
-  width: 100%;
-  background-color: #3c096c;
-  padding: 10px 0;
-  position: fixed;
-  top: 0;
-  left: 0;
+h2, .h2 {
+  margin-bottom: 20px;
+  font-size: 2rem; /* Increased font size */
+}
+
+form {
   display: flex;
-  justify-content: center;
-}
-
-/* Navbar icon list */
-.navbar-icons {
-  list-style: none;
-  display: flex;
-  gap: 40px; /* Increased gap for better spacing */
-}
-
-/* Navbar icon items */
-.navbar-icons li {
-  display: inline;
-}
-
-/* Navbar icon links */
-.navbar-icons a {
-  color: white; /* Make all icons white */
-  font-size: 24px;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for scaling and color */
-}
-
-/* Navbar icon hover effect */
-.navbar-icons a:hover {
-  color: #FFCC4D; /* Change color to the new color on hover */
-  transform: scale(1.2); /* Scale up the icon on hover */
-}
-
-/* Event Board Styles */
-.event-board {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000; /* Ensure it is above other elements */
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px); /* Background blur effect */
-  opacity: 1; /* Start fully opaque */
-  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for opacity and transform */
-  transform: scale(1); /* Start at normal scale */
-}
-
-/* Class to hide the event board */
-.event-board.hidden {
-  opacity: 0; /* Fade out */
-  transform: scale(0.95); /* Slightly shrink */
-  pointer-events: none; /* Prevent interaction */
-}
-
-/* Event Board Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0; /* Start fully transparent */
-  }
-  to {
-    opacity: 1; /* End fully opaque */
-  }
-}
-.event-board-content {
-  background: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+  flex-direction: column;
+  width: 100%; /* Make it responsive */
+  max-width: 400px; /* Max width for larger screens */
+  margin-top: auto; /* Moves the form down */
+  background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent black */
+  padding: 30px; /* More padding for better spacing */
   border-radius: 10px;
-  padding: 20px;
-  width: 400px; /* Width of the event board */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for the board */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
 }
 
-.event-board h2, .event-board .h2 {
-  margin: 0 0 10px 0; /* Margin for the title */
+.input-group {
+  margin-bottom: 20px; /* Increased space between input fields */
 }
 
-.event-board ul {
-  list-style: none; /* No bullet points */
-  padding: 0; /* Remove padding */
+label {
+  margin-bottom: 5px;
+  font-size: 1.1rem; /* Increased font size */
 }
 
-.event-board li {
-  margin: 5px 0; /* Space between events */
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #5A189A; /* Outline color */
+  width: 100%;
+  font-size: 1rem; /* Font size for inputs */
+  color: #000; /* Text color inside inputs */
 }
 
-/* Close Button Styles */
-.close-btn {
-  background: transparent;
-  border: none;
-  font-size: 16px; /* Smaller font size for the close button */
-  cursor: pointer;
-  position: absolute;
-  top: 10px; /* Distance from the top */
-  left: 50%; /* Center it horizontally */
-  transform: translateX(-50%); /* Offset the button to center it */
-  color: #3c096c; /* Match with your theme */
-  padding: 5px 10px; /* Add padding for a better touch area */
-  border-radius: 50%; /* Make the edges round */
-  transition: color 0.3s ease; /* Transition for hover effect */
+input:focus {
+  outline: none; /* Remove default outline */
+  border-color: #FFCC4D; /* Highlight border color on focus */
 }
 
-.close-btn:hover {
-  color: #FFCC4D; /* Change color on hover */
+button {
+  background: linear-gradient(90deg, #10002B, #360091); /* Gradient from left to right */
+  border: none; /* Removes default border */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Button padding */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  font-size: 16px; /* Font size */
+  transition: background 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for background and scale effect */
+  position: relative; /* Allows for absolute positioning of the outline */
+  z-index: 1; /* Ensure the button is above the outline */
 }
 
-.event-list {
-  display: flex; /* Use flexbox for horizontal layout */
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
-  gap: 16px; /* Space between items */
-  margin-top: 16px; /* Space above the event list */
+button:hover {
+  transform: scale(1.05); /* Slightly enlarges the button on hover */
+  box-shadow: 0 0 0 2px white; /* Creates a white outline effect on hover */
 }
 
-.event-item {
-  flex: 1 1 calc(25% - 16px); /* Adjust the size of each event item */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visibility */
-  border-radius: 8px; /* Rounded corners for the event items */
-  overflow: hidden; /* Prevent overflow from child elements */
+.error-message {
+  color: red;
+  margin-bottom: 15px;
+  font-size: 0.9rem; /* Smaller font size for error message */
 }
 
-.event-item img {
-  border-radius: 8px 8px 0 0; /* Round the top corners of the image */
+.forgot-password {
+  font-size: 0.8rem; /* Smaller font size */
+  color: white; /* Color for the text */
+  margin-top: 20px; /* Increased space above the text */
+  cursor: default; /* Normal cursor */
+  text-align: center; /* Center the text */
 }
 
-.event-details {
-  padding: 8px; /* Padding around the text details */
-  text-align: center; /* Center align text */
+.click-here {
+  color: #FDF103; /* Keep the original color for "Click here." */
+  text-decoration: none; /* No underline by default */
+}
+
+.click-here:hover {
+  text-decoration: underline; /* Underline only on hover */
 }

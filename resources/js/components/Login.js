@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../../sass/app.scss';
-import UConnect from '../../sass/img/UConnect.png';
-import eyeSolid from '../../sass/scss/eye-solid.svg';
-import eyeSlashSolid from '../../sass/scss/eye-slash-solid.svg'; 
+
 
 const Login = () => {
     const navigate = useNavigate();
@@ -23,7 +21,7 @@ const Login = () => {
             </div>
             <div className="right-nav">
                 <div className="login-container">
-                    <h1>𝐀𝐃𝐌𝐈𝐍 𝐋𝐎𝐆𝐈𝐍</h1>
+                   
                     <form onSubmit={handleSubmit}>
                         <div className="input-group">
                             <label htmlFor="username">𝚄𝚜𝚎𝚛𝚗𝚊𝚖𝚎</label>

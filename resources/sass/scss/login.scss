@@ -1,0 +1,57 @@
+// resources/sass/scss/login.scss
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #10002b; // Plain background color
+
+    .login-form {
+        background: rgba(255, 255, 255, 0.1); // Glass effect
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+
+        h1 {
+            font-family: 'Nunito', sans-serif;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+
+            label {
+                display: block;
+                color: #ddd;
+                margin-bottom: 5px;
+            }
+
+            input {
+                width: 100%;
+                padding: 10px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                background: rgba(255, 255, 255, 0.2);
+                color: white;
+            }
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #6200ea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #3700b3;
+            }
+        }
+    }
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Login from './components/Login'; 
+import Login from './components/login'; 
 import Profile from './components/profiling'; 
 import 'font-awesome/css/font-awesome.min.css';
 
