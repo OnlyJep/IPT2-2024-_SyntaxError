@@ -1,0 +1,115 @@
+// Importing Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+// Color variables for the theme
+$newpass-bg-color: #f0f0f5;
+$primary-color: #240046;
+$secondary-color: #3C096C;
+$input-border-color: #5A189A;
+$button-color: #7B2CBF;
+$button-hover-color: #9D4EDD;
+$error-color: #FF4D4D;
+
+// Main layout for the new password page
+.newpass-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $newpass-bg-color;
+  flex-direction: column; // Stack items vertically
+  font-family: 'Roboto', sans-serif; // Set the font for the entire page
+}
+
+// Styles for the form title (Change Password)
+h1 {
+  font-size: 24px;
+  color: $primary-color;
+  text-align: center;
+  margin-bottom: 20px; // Spacing below the title
+}
+
+// Form container to center inputs
+form {
+  display: flex;
+  flex-direction: column; // Stack inputs vertically
+  width: 100%;
+  max-width: 400px; // Set max width for the form
+  background-color: white; // Background for the form
+  padding: 20px; // Padding around the form
+  border-radius: 8px; // Rounded corners
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Shadow for depth
+}
+
+// Input group container for each input field and label
+.input-group {
+  margin-bottom: 20px; // Space between input groups
+  text-align: left; // Align labels to the left
+  
+  label {
+    display: block; // Make labels block elements
+    font-size: 14px;
+    color: $secondary-color;
+    margin-bottom: 5px; // Space between label and input
+    font-weight: bold;
+  }
+}
+
+// Input field styling for password inputs
+.input-field {
+  width: 100%; // Full width of the input
+  padding: 10px; // Padding inside input
+  border: 1px solid $input-border-color; // Border color
+  border-radius: 4px; // Rounded corners
+  font-size: 16px; // Font size for the input text
+  color: $primary-color; // Text color
+  
+  &:focus {
+    outline: none; // Remove default outline
+    border-color: $button-color; // Change border color on focus
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); // Shadow effect on focus
+  }
+}
+
+// Styling for the password container that holds the input and the toggle password icon
+.password-container {
+  position: relative; // Position for toggle icon
+  
+  .toggle-password {
+    position: absolute; // Position icon inside input
+    right: 10px; // Align to the right
+    top: 50%; // Center vertically
+    transform: translateY(-50%); // Adjust vertical position
+    cursor: pointer; // Pointer cursor on hover
+    
+    img {
+      width: 20px; // Size of the toggle icon
+      height: 20px; // Size of the toggle icon
+    }
+  }
+}
+
+// Button for submitting the form
+.submit-button {
+  width: 100%; // Full width of the button
+  padding: 12px; // Padding for the button
+  background-color: $button-color; // Button color
+  color: white; // Text color
+  border: none; // No border
+  border-radius: 4px; // Rounded corners
+  font-size: 16px; // Font size for button text
+  font-weight: bold; // Bold text
+  cursor: pointer; // Pointer cursor on hover
+  transition: background-color 0.3s ease; // Smooth transition for hover effect
+  
+  &:hover {
+    background-color: $button-hover-color; // Change color on hover
+  }
+}
+
+// Error message styling (if needed)
+.error-message {
+  color: $error-color; // Error text color
+  font-size: 12px; // Font size for error message
+  margin-bottom: 10px; // Space below error message
+}

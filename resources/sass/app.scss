@@ -1,13 +1,16 @@
-// resources/sass/app.scss
+
 
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
+
 // Variables
 @import 'variables'; // Ensure you have this file or remove if not used
 
+
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
 
 // Login container styles
 @import './scss/LoginContainer.scss';
@@ -15,4 +18,5 @@
 @import './scss/LLNav';
 @import './scss/LRNav';
 @import './scss/LPassw';
-@import './scss/profiling'
+@import './scss/profiling';
+@import './scss/Changepass.scss'
