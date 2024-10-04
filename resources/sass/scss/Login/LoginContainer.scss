@@ -1,0 +1,64 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Basic layout to center the form */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Aligns the form to the bottom */
+    align-items: center; /* Center the items horizontally */
+    height: 100vh; /* Full-screen height */
+    background-color: #10002b; /* The background color */
+    background-image: url('../../img/uurian.jpg'); /* Replace this with your actual image path */
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    padding-bottom: 15px; /* Add space at the bottom */
+    padding-top: 100px; /* Add some padding to the top if needed */
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2rem; /* Increased font size */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Make it responsive */
+    max-width: 400px; /* Max width for larger screens */
+    margin-top: auto; /* Moves the form down */
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent black */
+    padding: 30px; /* More padding for better spacing */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
+}
+
+.input-group {
+    margin-bottom: 20px; /* Increased space between input fields */
+}
+
+label {
+    margin-bottom: 5px;
+    font-size: 1.1rem; /* Increased font size */
+}
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #5A189A; /* Outline color */
+    width: 100%;
+    font-size: 1rem; /* Font size for inputs */
+    color: #000; /* Text color inside inputs */
+}
+
+input:focus {
+    outline: none; /* Remove default outline */
+    border-color: #FFCC4D; /* Highlight border color on focus */
+}

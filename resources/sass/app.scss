@@ -1,0 +1,19 @@
+
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+
+// Variables
+@import 'variables'; // Ensure you have this file or remove if not used
+
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+
+// Login container styles
+@import 'scss/Dashboard.scss';
+@import 'scss/Dashboardmenu.scss';
+@import 'scss/DashContent.scss'

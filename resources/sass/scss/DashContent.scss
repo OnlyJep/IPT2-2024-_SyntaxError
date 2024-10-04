@@ -1,0 +1,40 @@
+.main-content {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+
+      h1 {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .admin-info {
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+
+        span {
+          font-weight: bold;
+          color: #333;
+        }
+      }
+    }
+
+    .content {
+      margin-top: 20px;
+      /* Add your additional content styles here */
+    }
+  }

@@ -1,0 +1,22 @@
+.error-message {
+    color: red;
+    margin-bottom: 15px;
+    font-size: 0.9rem; /* Smaller font size for error message */
+}
+
+.forgot-password {
+    font-size: 0.8rem; /* Smaller font size */
+    color: white; /* Color for the text */
+    margin-top: 20px; /* Increased space above the text */
+    cursor: default; /* Normal cursor */
+    text-align: center; /* Center the text */
+}
+
+.click-here {
+    color: #FDF103; /* Keep the original color for "Click here." */
+    text-decoration: none; /* No underline by default */
+}
+
+.click-here:hover {
+    text-decoration: underline; /* Underline only on hover */
+}

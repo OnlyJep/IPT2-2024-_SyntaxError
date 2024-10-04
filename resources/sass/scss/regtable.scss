@@ -1,0 +1,54 @@
+.registration-table {
+  width: 100%;
+  border-collapse: collapse; // Ensures that the borders between cells are collapsed into a single border
+  margin-top: 20px; // Adds space above the table
+  font-size: 1rem; // Adjusts font size for better readability
+  border: 1px solid #001f3f; // Border around the entire table
+
+  thead {
+    background-color: #001f3f; // Navy blue background for header
+    color: #ffffff; // White text color
+    text-align: left;
+
+    th {
+      padding: 10px; // Padding for header cells
+      border-bottom: 2px solid #ffffff; // Bottom border for header cells
+      border-right: 1px solid #ffffff; // Right border for header cells
+
+      &:last-child {
+        border-right: none; // Remove right border from the last header cell
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      &:nth-child(even) {
+        background-color: #f2f2f2; // Light gray for even rows
+      }
+
+      &:nth-child(odd) {
+        background-color: #ffffff; // White for odd rows
+      }
+
+      td {
+        padding: 10px; // Padding for body cells
+        border-bottom: 1px solid #cccccc; // Bottom border for body cells
+        border-right: 1px solid #cccccc; // Right border for body cells
+
+        &:last-child {
+          border-right: none; // Remove right border from the last cell in each row
+        }
+      }
+
+      &:hover {
+        background-color: #e0e0e0; // Change background color on hover
+      }
+    }
+  }
+  
+  // Optional: Adding a border around the whole table body
+  tbody tr {
+    border: 1px solid #cccccc; // Adding a border to each row
+  }
+}

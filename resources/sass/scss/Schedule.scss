@@ -1,0 +1,37 @@
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #001f3f; // Navy background for the table
+    color: #ffffff; // White text color
+    border-radius: 8px;
+    overflow: hidden;
+  
+    th, td {
+      border: 1px solid #003366; // Darker navy for the border
+      padding: 10px;
+      text-align: center;
+    }
+  
+    th {
+      background-color: #004080; // Lighter navy for header
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  
+    tbody tr {
+      transition: background-color 0.3s ease; // Smooth transition for hover effect
+    }
+  
+    tbody tr:hover {
+      background-color: #00509e; // Highlight on hover
+    }
+  
+    // Responsive design for smaller screens
+    @media (max-width: 768px) {
+      th, td {
+        font-size: 0.9rem; // Smaller font size on mobile
+      }
+    }
+  }
+  

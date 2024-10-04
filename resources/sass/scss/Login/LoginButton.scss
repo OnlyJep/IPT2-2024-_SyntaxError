@@ -1,0 +1,19 @@
+button {
+    background: linear-gradient(90deg, #10002B, #360091); /* Gradient from left to right */
+    border: none; /* Removes default border */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    font-size: 16px; /* Font size */
+    transition: background 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for background and scale effect */
+    position: relative; /* Allows for absolute positioning of the outline */
+    z-index: 1; /* Ensure the button is above the outline */
+    
+}
+
+button:hover {
+    transform: scale(1.05); /* Slightly enlarges the button on hover */
+    box-shadow: 0 0 0 2px white; /* Creates a white outline effect on hover */
+}
+    
