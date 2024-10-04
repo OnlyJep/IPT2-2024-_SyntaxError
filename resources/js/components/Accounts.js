@@ -14,7 +14,7 @@ function Accounts() {
         <nav className="menu">
           <ul>
             <li>
-              <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
+              <NavLink to="/dashboard" className={({ isActive }) => (isActive ? "active" : "")}>
                 <i className="fa-solid fa-cloud"></i> Dashboard
               </NavLink>
             </li>

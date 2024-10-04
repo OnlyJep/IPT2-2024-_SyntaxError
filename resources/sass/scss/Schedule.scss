@@ -1,37 +1,68 @@
+.dashboard-container {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #7B2CBF;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed; /* Keep sidebar fixed */
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.main-content {
+  margin-left: 250px; /* Offset by the width of the sidebar */
+  padding: 20px;
+  width: calc(100% - 250px);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: auto; /* Allow the main content to scroll */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content {
+  margin-top: 20px;
+  overflow-y: auto; /* Allow scrolling */
+}
+
 .schedule-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    background-color: #001f3f; // Navy background for the table
-    color: #ffffff; // White text color
-    border-radius: 8px;
-    overflow: hidden;
-  
-    th, td {
-      border: 1px solid #003366; // Darker navy for the border
-      padding: 10px;
-      text-align: center;
-    }
-  
-    th {
-      background-color: #004080; // Lighter navy for header
-      font-weight: bold;
-      text-transform: uppercase;
-    }
-  
-    tbody tr {
-      transition: background-color 0.3s ease; // Smooth transition for hover effect
-    }
-  
-    tbody tr:hover {
-      background-color: #00509e; // Highlight on hover
-    }
-  
-    // Responsive design for smaller screens
-    @media (max-width: 768px) {
-      th, td {
-        font-size: 0.9rem; // Smaller font size on mobile
-      }
-    }
-  }
-  
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #dddddd;
+  font-size: 14px;
+}
+
+.schedule-table th {
+  background-color: #d1c000e1;
+}
+
+.schedule-table tbody {
+  height: calc(100vh - 200px); /* Adjust based on header and padding */
+  overflow-y: auto;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}

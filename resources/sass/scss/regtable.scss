@@ -3,10 +3,10 @@
   border-collapse: collapse; // Ensures that the borders between cells are collapsed into a single border
   margin-top: 20px; // Adds space above the table
   font-size: 1rem; // Adjusts font size for better readability
-  border: 1px solid #001f3f; // Border around the entire table
+  border: 1px solid #d1c000e1; // Border around the entire table
 
   thead {
-    background-color: #001f3f; // Navy blue background for header
+    background-color: #d1c000e1; // Navy blue background for header
     color: #ffffff; // White text color
     text-align: left;
 
@@ -46,9 +46,31 @@
       }
     }
   }
-  
-  // Optional: Adding a border around the whole table body
+
+  // Adding a border around the whole table body
   tbody tr {
     border: 1px solid #cccccc; // Adding a border to each row
   }
+}
+
+.view-button {
+  background-color: #FFD700; // Solid yellow background color
+  color: white; // White text color
+  border: none; // No border
+  padding: 8px 12px; // Padding for the button
+  border-radius: 4px; // Rounded corners
+  cursor: pointer; // Pointer cursor on hover
+  transition: background-color 0.3s; // Smooth transition for background color
+
+  &:hover {
+    background-color: #FFC107; // Slightly darker yellow on hover
+  }
+}
+
+
+
+// Flexbox container for button alignment
+.button-container {
+  display: flex; // Use flexbox
+  justify-content: center; // Center the button horizontally
 }

@@ -22,7 +22,7 @@ function Logout() {
         <nav className="menu">
           <ul>
             <li>
-              <NavLink to="/" activeClassName="active">
+              <NavLink to="/dashboard" activeClassName="active">
                 <i className="fa-solid fa-cloud"></i> Dashboard
               </NavLink>
             </li>

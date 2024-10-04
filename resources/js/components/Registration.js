@@ -1,8 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'; // Importing NavLink for navigation
 import fsuuLogo from '../../sass/img/fsuu.png'; // Importing the logo
-import '../../sass/app.scss'; // Importing the styles
-import '../../sass/scss/regtable.scss'; // Importing the registration table styles
+import '../../sass/app.scss'; // Importing the registration table styles
 
 function Registration() {
   return (
@@ -17,7 +16,7 @@ function Registration() {
         <nav className="menu">
           <ul>
             <li>
-              <NavLink to="/" activeClassName="active">
+              <NavLink to="/dashboard" activeClassName="active">
                 <i className="fa-solid fa-cloud"></i> Dashboard
               </NavLink>
             </li>
@@ -78,10 +77,25 @@ function Registration() {
                 <th>School Year</th>
                 <th>Section</th>
                 <th>Semester</th>
+                <th>Actions</th> {/* New Actions column */}
               </tr>
             </thead>
             <tbody>
-              {/* You can dynamically add rows here */}
+              {/* Example Row */}
+              <tr>
+                <td>2023001</td>
+                <td>John Doe</td>
+                <td>2nd Year</td>
+                <td>Computer Science</td>
+                <td>OLD (Regular) (15 Unit(s) Allowed)</td>
+                <td>2024-2025</td>
+                <td>BSCS-2A</td>
+                <td>1st Semester</td>
+                <td>
+                  <button className="view-button">View</button> {/* View button */}
+                </td>
+              </tr>
+              {/* Add more rows dynamically as needed */}
             </tbody>
           </table>
         </section>

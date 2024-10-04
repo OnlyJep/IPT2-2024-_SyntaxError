@@ -1,0 +1,44 @@
+// LoginAlert.scss
+
+.success-alert {
+    background-color: #28a745;
+    color: white;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    position: fixed;
+    top: -100px; /* Starts hidden above the screen */
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    z-index: 1000;
+    animation: slideDown 0.8s ease-in-out forwards, fadeOut 2s 3s ease forwards; /* Slide down and then fade out */
+}
+
+@keyframes slideDown {
+    0% {
+        top: -100px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.error-message {
+    color: #e3342f;
+    font-weight: bold;
+    margin-top: 10px;
+}

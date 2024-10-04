@@ -1,7 +1,7 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom'; // Importing NavLink for navigation
 import fsuuLogo from '../../sass/img/fsuu.png'; // Importing the logo
 import '../../sass/app.scss'; // Importing the styles
-import { NavLink } from 'react-router-dom'; // Importing NavLink for navigation
 
 function Dashboard() {
   return (
@@ -16,7 +16,7 @@ function Dashboard() {
         <nav className="menu">
           <ul>
             <li>
-              <NavLink to="/" activeClassName="active">
+              <NavLink to="/dashboard" activeClassName="active">
                 <i className="fa-solid fa-cloud"></i> Dashboard
               </NavLink>
             </li>

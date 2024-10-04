@@ -17,15 +17,15 @@
   }
   
   h1 {
-    color: #000000;
+    color:  #000000;
     margin-bottom: 20px;
   }
   
   .form-container {
-    background: white;
+    background: rgb(255, 255, 255);
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgb(255, 255, 255);
     max-width: 400px;
     margin: 0 auto; /* Center the form horizontally */
   }
@@ -37,7 +37,7 @@
   label {
     display: block;
     margin-bottom: 5px;
-    color: #333;
+    color: #ffffff;
   }
   
   input {

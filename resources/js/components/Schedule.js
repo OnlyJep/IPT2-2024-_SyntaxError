@@ -1,7 +1,6 @@
 import React from 'react';
 import fsuuLogo from '../../sass/img/fsuu.png'; // Importing the logo
 import '../../sass/app.scss'; // Importing the styles
-import '../../sass/scss/Schedule.scss'; // Importing the new styles for Change Password
 import { NavLink } from 'react-router-dom'; // Importing NavLink for navigation
 
 function Schedule() {
@@ -15,7 +14,7 @@ function Schedule() {
         <nav className="menu">
           <ul>
             <li>
-              <NavLink to="/" activeClassName="active">
+              <NavLink to="/dashboard" activeClassName="active">
                 <i className="fa-solid fa-cloud"></i> Dashboard
               </NavLink>
             </li>
