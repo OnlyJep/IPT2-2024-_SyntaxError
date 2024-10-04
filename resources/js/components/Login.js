@@ -11,7 +11,6 @@ function AdminLogin() {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // Dummy login validation for now (you can replace this with your real validation later)
         if (username === 'admin' && password === 'password') {
             alert('Welcome, Admin!');
             setErrorMessage('');

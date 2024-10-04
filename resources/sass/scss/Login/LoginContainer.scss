@@ -17,7 +17,7 @@ html, body {
     background-size: cover; /* Ensure the image covers the entire area */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
-    color: white;
+    color: rgb(255, 255, 255);
     font-family: 'Nunito', sans-serif;
     padding-bottom: 15px; /* Add space at the bottom */
     padding-top: 100px; /* Add some padding to the top if needed */
@@ -37,7 +37,7 @@ form {
     background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent black */
     padding: 30px; /* More padding for better spacing */
     border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Add a shadow for depth */
+    box-shadow: 0 4px 20px rgb(0, 0, 0); /* Add a shadow for depth */
 }
 
 .input-group {
