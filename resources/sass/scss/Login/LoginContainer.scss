@@ -9,18 +9,24 @@ html, body {
 .login-container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Aligns the form to the bottom */
+    justify-content: center; /* Center the items vertically */
     align-items: center; /* Center the items horizontally */
     height: 100vh; /* Full-screen height */
     background-color: #10002b; /* The background color */
-    background-image: url('../../img/uurian.jpg'); /* Replace this with your actual image path */
+    background-image: url('../../img/admin.png'); /* Replace this with your actual image path */
     background-size: cover; /* Ensure the image covers the entire area */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
     color: rgb(255, 255, 255);
     font-family: 'Nunito', sans-serif;
-    padding-bottom: 15px; /* Add space at the bottom */
-    padding-top: 100px; /* Add some padding to the top if needed */
+    padding-bottom: 0px; /* Add space at the bottom */
+    padding-top: 0px; /* Reduced padding to fit the logo */
+}
+
+.logo {
+    width: 150px; /* Set a width for the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Space below the logo */
 }
 
 h2 {
@@ -33,7 +39,7 @@ form {
     flex-direction: column;
     width: 100%; /* Make it responsive */
     max-width: 400px; /* Max width for larger screens */
-    margin-top: auto; /* Moves the form down */
+    margin-top: 20px; /* Add space above the form */
     background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent black */
     padding: 30px; /* More padding for better spacing */
     border-radius: 10px;
@@ -53,7 +59,7 @@ input {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #5A189A; /* Outline color */
-    width: 100%;
+    width: 95%;
     font-size: 1rem; /* Font size for inputs */
     color: #000; /* Text color inside inputs */
 }
@@ -61,4 +67,41 @@ input {
 input:focus {
     outline: none; /* Remove default outline */
     border-color: #FFCC4D; /* Highlight border color on focus */
+}
+
+/* Button styles */
+button {
+    padding: 12px 20px; /* Increase padding for the button */
+    margin-top: 10px; /* Add some space above the button */
+    background-color: #5A189A; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Round edges */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-size: 1rem; /* Font size for the button */
+}
+
+button:hover {
+    background-color: #FFCC4D; /* Change background color on hover */
+}
+
+/* Copyright section styles */
+.copyright-container {
+    display: flex;
+    align-items: center; /* Center the items vertically */
+    justify-content: center; /* Center the items horizontally */
+    padding: 10px 0; /* Add padding for spacing */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    position: absolute; /* Position it at the bottom */
+    bottom: 0; /* Align it to the bottom */
+    left: 0; /* Align it to the left */
+    right: 0; /* Align it to the right */
+    color: white; /* Text color */
+    font-size: 0.9rem; /* Font size for copyright text */
+}
+
+.fsuu-logo {
+    width: 40px; /* Adjust the size of the logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between the logo and the text */
 }

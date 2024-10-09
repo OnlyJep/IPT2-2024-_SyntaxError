@@ -8699,12 +8699,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/dist/index.js");
 /* harmony import */ var _sass_scss_Login_LoginButton_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../sass/scss/Login/LoginButton.scss */ "./resources/sass/scss/Login/LoginButton.scss");
 /* harmony import */ var _sass_scss_Login_LoginContainer_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../sass/scss/Login/LoginContainer.scss */ "./resources/sass/scss/Login/LoginContainer.scss");
 /* harmony import */ var _sass_scss_Login_LoginForgot_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../sass/scss/Login/LoginForgot.scss */ "./resources/sass/scss/Login/LoginForgot.scss");
 /* harmony import */ var _sass_scss_Login_LoginAlert_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../sass/scss/Login/LoginAlert.scss */ "./resources/sass/scss/Login/LoginAlert.scss");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _sass_img_fsuu_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../sass/img/fsuu.png */ "./resources/sass/img/fsuu.png");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _slicedToArray(r, e) { return _arrayWithHoles(r) || _iterableToArrayLimit(r, e) || _unsupportedIterableToArray(r, e) || _nonIterableRest(); }
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
@@ -8717,6 +8718,7 @@ function _arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 
  // Import the CSS for the alert
+ // Corrected path to fsuu.png
 
 function AdminLogin() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
@@ -8734,38 +8736,34 @@ function AdminLogin() {
   var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(''),
     _useState8 = _slicedToArray(_useState7, 2),
     successMessage = _useState8[0],
-    setSuccessMessage = _useState8[1]; // For showing success message
-
-  var navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_6__.useNavigate)(); // Initialize useNavigate
-
+    setSuccessMessage = _useState8[1];
+  var navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_7__.useNavigate)();
   var handleSubmit = function handleSubmit(e) {
     e.preventDefault();
-
-    // Validate login credentials
     if (username === 'admin' && password === 'test') {
       setSuccessMessage('Welcome, Admin! Redirecting to the dashboard...');
       setErrorMessage('');
       setTimeout(function () {
-        navigate('/dashboard'); // Redirect to /dashboard after 2 seconds
+        navigate('/dashboard');
       }, 2000);
     } else {
-      setSuccessMessage(''); // Clear success message
+      setSuccessMessage('');
       setErrorMessage('Invalid credentials. Please try again.');
     }
   };
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
     className: "login-container",
-    children: [successMessage && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+    children: [successMessage && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
       className: "success-alert",
       children: successMessage
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("form", {
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("form", {
       onSubmit: handleSubmit,
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
         className: "input-group",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("label", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("label", {
           htmlFor: "username",
           children: "Username:"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("input", {
           type: "text",
           id: "username",
           value: username,
@@ -8774,12 +8772,12 @@ function AdminLogin() {
           },
           required: true
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
         className: "input-group",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("label", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("label", {
           htmlFor: "password",
           children: "Password:"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("input", {
           type: "password",
           id: "password",
           value: password,
@@ -8788,21 +8786,30 @@ function AdminLogin() {
           },
           required: true
         })]
-      }), errorMessage && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
+      }), errorMessage && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
         className: "error-message",
         children: errorMessage
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("button", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("button", {
         type: "submit",
         children: "Log In"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("p", {
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("p", {
         className: "forgot-password",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
           children: "Forgot your password? "
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("a", {
           href: "/reset-password",
           className: "click-here",
           children: "Click here."
         })]
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+      className: "copyright-container",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("img", {
+        src: _sass_img_fsuu_png__WEBPACK_IMPORTED_MODULE_5__["default"],
+        alt: "FSUU Logo",
+        className: "fsuu-logo"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("p", {
+        children: "\xA9 2024 Urian Connect. All Rights Reserved."
       })]
     })]
   });
@@ -15844,15 +15851,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _img_uurian_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../img/uurian.jpg */ "./resources/sass/img/uurian.jpg");
+/* harmony import */ var _img_admin_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../img/admin.png */ "./resources/sass/img/admin.png");
 // Imports
 
 
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_img_uurian_jpg__WEBPACK_IMPORTED_MODULE_2__["default"]);
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_img_admin_png__WEBPACK_IMPORTED_MODULE_2__["default"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "html, body {\n  height: 100%;\n  margin: 0;\n  padding: 0;\n  overflow: hidden;\n}\n\n/* Basic layout to center the form */\n.login-container {\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-end; /* Aligns the form to the bottom */\n  align-items: center; /* Center the items horizontally */\n  height: 100vh; /* Full-screen height */\n  background-color: #10002b; /* The background color */\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + "); /* Replace this with your actual image path */\n  background-size: cover; /* Ensure the image covers the entire area */\n  background-position: center; /* Center the image */\n  background-repeat: no-repeat; /* Prevent the image from repeating */\n  color: rgb(255, 255, 255);\n  font-family: \"Nunito\", sans-serif;\n  padding-bottom: 15px; /* Add space at the bottom */\n  padding-top: 100px; /* Add some padding to the top if needed */\n}\n\nh2 {\n  margin-bottom: 20px;\n  font-size: 2rem; /* Increased font size */\n}\n\nform {\n  display: flex;\n  flex-direction: column;\n  width: 100%; /* Make it responsive */\n  max-width: 400px; /* Max width for larger screens */\n  margin-top: auto; /* Moves the form down */\n  background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent black */\n  padding: 30px; /* More padding for better spacing */\n  border-radius: 10px;\n  box-shadow: 0 4px 20px rgb(0, 0, 0); /* Add a shadow for depth */\n}\n\n.input-group {\n  margin-bottom: 20px; /* Increased space between input fields */\n}\n\nlabel {\n  margin-bottom: 5px;\n  font-size: 1.1rem; /* Increased font size */\n}\n\ninput {\n  padding: 10px;\n  border-radius: 5px;\n  border: 1px solid #5A189A; /* Outline color */\n  width: 100%;\n  font-size: 1rem; /* Font size for inputs */\n  color: #000; /* Text color inside inputs */\n}\n\ninput:focus {\n  outline: none; /* Remove default outline */\n  border-color: #FFCC4D; /* Highlight border color on focus */\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "html, body {\n  height: 100%;\n  margin: 0;\n  padding: 0;\n  overflow: hidden;\n}\n\n/* Basic layout to center the form */\n.login-container {\n  display: flex;\n  flex-direction: column;\n  justify-content: center; /* Center the items vertically */\n  align-items: center; /* Center the items horizontally */\n  height: 100vh; /* Full-screen height */\n  background-color: #10002b; /* The background color */\n  background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + "); /* Replace this with your actual image path */\n  background-size: cover; /* Ensure the image covers the entire area */\n  background-position: center; /* Center the image */\n  background-repeat: no-repeat; /* Prevent the image from repeating */\n  color: rgb(255, 255, 255);\n  font-family: \"Nunito\", sans-serif;\n  padding-bottom: 0px; /* Add space at the bottom */\n  padding-top: 0px; /* Reduced padding to fit the logo */\n}\n\n.logo {\n  width: 150px; /* Set a width for the logo */\n  height: auto; /* Maintain aspect ratio */\n  margin-bottom: 20px; /* Space below the logo */\n}\n\nh2 {\n  margin-bottom: 20px;\n  font-size: 2rem; /* Increased font size */\n}\n\nform {\n  display: flex;\n  flex-direction: column;\n  width: 100%; /* Make it responsive */\n  max-width: 400px; /* Max width for larger screens */\n  margin-top: 20px; /* Add space above the form */\n  background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent black */\n  padding: 30px; /* More padding for better spacing */\n  border-radius: 10px;\n  box-shadow: 0 4px 20px rgb(0, 0, 0); /* Add a shadow for depth */\n}\n\n.input-group {\n  margin-bottom: 20px; /* Increased space between input fields */\n}\n\nlabel {\n  margin-bottom: 5px;\n  font-size: 1.1rem; /* Increased font size */\n}\n\ninput {\n  padding: 10px;\n  border-radius: 5px;\n  border: 1px solid #5A189A; /* Outline color */\n  width: 95%;\n  font-size: 1rem; /* Font size for inputs */\n  color: #000; /* Text color inside inputs */\n}\n\ninput:focus {\n  outline: none; /* Remove default outline */\n  border-color: #FFCC4D; /* Highlight border color on focus */\n}\n\n/* Button styles */\nbutton {\n  padding: 12px 20px; /* Increase padding for the button */\n  margin-top: 10px; /* Add some space above the button */\n  background-color: #5A189A; /* Button background color */\n  color: white; /* Button text color */\n  border: none; /* Remove border */\n  border-radius: 5px; /* Round edges */\n  cursor: pointer; /* Change cursor to pointer on hover */\n  font-size: 1rem; /* Font size for the button */\n}\n\nbutton:hover {\n  background-color: #FFCC4D; /* Change background color on hover */\n}\n\n/* Copyright section styles */\n.copyright-container {\n  display: flex;\n  align-items: center; /* Center the items vertically */\n  justify-content: center; /* Center the items horizontally */\n  padding: 10px 0; /* Add padding for spacing */\n  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */\n  position: absolute; /* Position it at the bottom */\n  bottom: 0; /* Align it to the bottom */\n  left: 0; /* Align it to the left */\n  right: 0; /* Align it to the right */\n  color: white; /* Text color */\n  font-size: 0.9rem; /* Font size for copyright text */\n}\n\n.fsuu-logo {\n  width: 40px; /* Adjust the size of the logo */\n  height: auto; /* Maintain aspect ratio */\n  margin-right: 10px; /* Space between the logo and the text */\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -16003,6 +16010,21 @@ module.exports = function (url, options) {
 
 /***/ }),
 
+/***/ "./resources/sass/img/admin.png":
+/*!**************************************!*\
+  !*** ./resources/sass/img/admin.png ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/admin.png?98896f1b4f75e11051e9fe57028e3bb2");
+
+/***/ }),
+
 /***/ "./resources/sass/img/fsuu.png":
 /*!*************************************!*\
   !*** ./resources/sass/img/fsuu.png ***!
@@ -16015,21 +16037,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/fsuu.png?ca62ee9450d9a90c5ed2bf20c81246cf");
-
-/***/ }),
-
-/***/ "./resources/sass/img/uurian.jpg":
-/*!***************************************!*\
-  !*** ./resources/sass/img/uurian.jpg ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/uurian.jpg?431524f28ed152dcb8c6f5b8cc42c805");
 
 /***/ }),
 
